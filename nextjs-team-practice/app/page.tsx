@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { LatestWorks } from "./components/latest-works"
 import { PaintingProcess } from "./components/painting-process"
 import { CTASection } from "./components/cta-section"
