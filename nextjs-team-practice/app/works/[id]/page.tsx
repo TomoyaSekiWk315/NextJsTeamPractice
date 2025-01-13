@@ -12,7 +12,9 @@ import { Metadata } from 'next'
 import { ResolvingMetadata } from 'next'
 
 // SearchParamsの型を定義
-type SearchParams = { [key: string]: string | string[] | undefined }
+type SearchParams = {
+  // idを使用しない場合は削除
+}
 
 // Paramsの型を定義
 type Params = {
