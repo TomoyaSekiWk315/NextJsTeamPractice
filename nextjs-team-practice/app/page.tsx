@@ -1,11 +1,8 @@
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { LatestWorks } from "./components/latest-works"
 import { PaintingProcess } from "./components/painting-process"
 import { CTASection } from "./components/cta-section"
 import { Footer } from "@/app/components/shared/footer"
-import { Header } from "@/app/components/shared/header"
+import { Header } from "./components/shared/header"
 import { Services } from "./components/services"
 import { CompanyFeatures } from "./components/company-features"
 

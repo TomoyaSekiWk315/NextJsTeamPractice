@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button"
-
 const steps = [
   { id: 1, title: "STEP1", description: "無料見積もり\n現地調査" },
   { id: 2, title: "STEP2", description: "無料見積もり\n現地調査" },

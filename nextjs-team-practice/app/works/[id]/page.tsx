@@ -6,24 +6,49 @@ import { CustomerVoice } from "../components/customer-voice"
 import { ContactCTA } from "@/app/services/components/contact-cta"
 import { Footer } from "@/app/components/shared/footer"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
+import { Metadata } from 'next'
 
-interface WorkDetailPageProps {
-  params: {
-    id: string
+// Next.jsの型定義をインポート
+import { ResolvingMetadata } from 'next'
+
+// SearchParamsの型を定義
+type SearchParams = {
+  // idを使用しない場合は削除
+}
+
+// Paramsの型を定義
+type Params = {
+  id: string
+}
+
+// Propsの型を修正
+type Props = {
+  params: Params
+  searchParams: SearchParams
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  return {
+    title: `施工事例 - ${params.id}`,
   }
 }
 
 function getWorkData(id: string) {
-  // This is mock data - replace with actual data fetching
   return {
-    title: "○○家様○○塗装",
+    title: `○○家様${id}塗装`,
     overview: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
     features: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
     customerVoice: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
   }
 }
 
-export default function WorkDetailPage({ params }: WorkDetailPageProps) {
+// ページコンポーネントをasyncに戻す
+export default async function WorkDetailPage({ 
+  params 
+}: Props) {
   const workData = getWorkData(params.id)
   return (
     <div className="min-h-screen">
