@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Mail, Phone } from 'lucide-react'
 
+// コメント
 export function CTASection() {
   return (
     <section className="py-16 bg-white">
