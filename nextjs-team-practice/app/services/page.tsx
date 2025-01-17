@@ -53,8 +53,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <Header />
       <ServiceHero />
-      <main className="bg-[#f3f3f3]">
-        <div className="container mx-auto px-4">
+      <main className="bg-[#ffffff]">
           <Breadcrumb 
             items={[
               { label: 'ホーム', href: '/' },
@@ -83,7 +82,6 @@ export default function ServicesPage() {
           />
           <SpecialPainting />
           <CTASection />
-        </div>
       </main>
       <Footer />
     </div>
