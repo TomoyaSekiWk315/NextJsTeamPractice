@@ -41,7 +41,7 @@ export function LatestWorks() {
                   <p className="text-sm mb-4">{work.description}</p>
                   <Button 
                     variant="outline" 
-                    className="w-full border-[#000000] shadow-md hover:bg-[#000000] hover:text-white transition-colors duration-300"
+                    className="w-[45%] border-[#000000] shadow-md hover:bg-[#000000] hover:text-white transition-colors duration-300"
                   >
                     詳細を見る→
                   </Button>
