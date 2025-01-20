@@ -94,13 +94,14 @@ export function ContactForm() {
             />
           </div>
 
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-4 border-2 border-[#005a64] p-4 rounded-lg max-w-md mx-auto">
             <Checkbox
               id="privacy"
               checked={privacyAccepted}
               onCheckedChange={(checked) => setPrivacyAccepted(checked as boolean)}
+              className="w-5 h-5 border-2 border-[#005a64]"
             />
-            <Label htmlFor="privacy" className="text-sm">
+            <Label htmlFor="privacy" className="text-base font-medium">
               プライバシーポリシーに同意します
             </Label>
           </div>
