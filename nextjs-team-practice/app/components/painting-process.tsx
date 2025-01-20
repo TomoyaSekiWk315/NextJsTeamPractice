@@ -8,8 +8,8 @@ const steps = [
 
 export function PaintingProcess() {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-16">
+      <div className="w-full bg-[#F3F3F3] rounded-[50px] p-16">
         <h2 className="text-3xl font-bold text-center mb-12">塗装の流れ</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-16 mb-16">
           {steps.map((step) => (
