@@ -36,18 +36,12 @@ export default async function ServiceDetailPage({
     resolvedParams.type === 'special-painting' ? '特殊塗装' :
     '塗装サービス';
 
-  const serviceDescription = 
-    resolvedParams.type === 'exterior-wall-painting' ? 'お客様のニーズに合わせた高品質な外壁塗装サービスを提供いたします。' :
-    resolvedParams.type === 'roof-painting' ? 'お客様のニーズに合わせた高品質な屋根塗装サービスを提供いたします。' :
-    resolvedParams.type === 'special-painting' ? 'お客様のニーズに合わせた高品質な特殊塗装サービスを提供いたします。' :
-    'お客様のニーズに合わせた高品質な塗装サービスを提供いたします。';
-
   return (
     <div className="min-h-screen">
       <Header />
       <ServiceDetailHero title={serviceTitle} />
       <main>
-        <div className="container mx-auto px-4">
+       <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
               { label: 'ホーム', href: '/' },
@@ -57,16 +51,15 @@ export default async function ServiceDetailPage({
           />
           
           <section className="py-16">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              {serviceTitle}の詳細
-            </h2>
-            <p className="text-lg mb-8 text-center">
-              {serviceDescription}
-            </p>
-            <ServiceFeatures />
+            <div className="w-full bg-[#F3F3F3] rounded-[50px] p-16">
+              <h2 className="text-3xl font-bold text-center mb-12">
+                {serviceTitle}の特徴
+              </h2>
+              <ServiceFeatures />
+            </div>
           </section>
 
-          <section className="py-16 bg-[#f3f3f3]">
+          <section className="py-16 bg-[#f3f3f3] rounded-[50px]">
             <h2 className="text-3xl font-bold text-center mb-12">
               {serviceTitle}の流れ
             </h2>
@@ -77,11 +70,12 @@ export default async function ServiceDetailPage({
               </Button>
             </div>
           </section>
-        </div>
 
-        <FAQSection />
-      </main>
+          <FAQSection />
+          
+      </div>
       <ContactCTA />
+      </main>
       <Footer />
     </div>
   )
