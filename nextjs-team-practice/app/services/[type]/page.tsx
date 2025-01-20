@@ -41,6 +41,7 @@ export default async function ServiceDetailPage({
       <Header />
       <ServiceDetailHero title={serviceTitle} />
       <main>
+       <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
               { label: 'ホーム', href: '/' },
@@ -70,9 +71,11 @@ export default async function ServiceDetailPage({
             </div>
           </section>
 
-        <FAQSection />
-      </main>
+          <FAQSection />
+          
+      </div>
       <ContactCTA />
+      </main>
       <Footer />
     </div>
   )

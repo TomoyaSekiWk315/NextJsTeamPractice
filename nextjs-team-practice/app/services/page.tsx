@@ -54,7 +54,7 @@ export default function ServicesPage() {
       <Header />
       <ServiceHero />
       <main className="bg-[#ffffff]">
-          <Breadcrumb 
+        <div className="container mx-auto px-4">          <Breadcrumb 
             items={[
               { label: 'ホーム', href: '/' },
               { label: 'サービス', href: '/services' }
@@ -81,7 +81,8 @@ export default function ServicesPage() {
             }}
           />
           <SpecialPainting />
-          <CTASection />
+        </div>
+        <CTASection />
       </main>
       <Footer />
     </div>
