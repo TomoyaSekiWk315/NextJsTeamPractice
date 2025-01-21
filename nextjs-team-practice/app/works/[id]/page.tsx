@@ -54,7 +54,7 @@ export default async function WorkDetailPage({
     <div className="min-h-screen">
       <Header />
       <WorkDetailHero />
-      <main className="bg-[#f3f3f3]">
+      <main className="bg-[#ffffff]">
         <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
@@ -63,9 +63,15 @@ export default async function WorkDetailPage({
               { label: workData.title, href: `/works/${params.id}` }
             ]} 
           />
-          <WorkOverview data={workData} />
-          <BeforeAfter />
-          <CustomerVoice testimonial={workData.customerVoice} />
+          <div className="w-full bg-[#F3F3F3] rounded-[50px] p-16 my-16">
+            <WorkOverview data={workData} />
+          </div>
+          <div className="w-full bg-[#F3F3F3] rounded-[50px] p-16 my-16">
+            <BeforeAfter />
+          </div>
+          <div className="w-full bg-[#F3F3F3] rounded-[50px] p-16 my-16">
+            <CustomerVoice testimonial={workData.customerVoice} />
+          </div>
         </div>
         <ContactCTA />
         <Footer />
