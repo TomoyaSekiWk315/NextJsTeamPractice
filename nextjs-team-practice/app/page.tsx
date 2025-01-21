@@ -17,20 +17,34 @@ export default function Home() {
         <p className="text-[32px]">概要説明文：32px</p>
       </section>
 
-      {/* Services */}
-      <Services />
+      <main className="bg-[#ffffff]">
+        <div className="container mx-auto px-4">
+          {/* Services */}
+          <section className="section-spacing">
+            <Services />
+          </section>
 
-      {/* Company Features */}
-      <CompanyFeatures />
+          {/* Company Features */}
+          <section className="section-spacing">
+            <CompanyFeatures />
+          </section>
 
-      {/* Latest Works */}
-      <LatestWorks />
+          {/* Latest Works */}
+          <section className="section-spacing">
+            <LatestWorks />
+          </section>
 
-      {/* Painting Process */}
-      <PaintingProcess />
+          {/* Painting Process */}
+          <section className="section-spacing">
+            <PaintingProcess />
+          </section>
+        </div>
 
-      {/* CTA Section */}
-      <CTASection />
+        {/* CTA Section */}
+        <section className="section-spacing">
+          <CTASection />
+        </section>
+      </main>
 
       {/* Footer */}
       <Footer />
