@@ -18,7 +18,9 @@ export default function WorksPage() {
               { label: '施工事例', href: '/works' }
             ]} 
           />
-          <WorksList />
+          <div className="w-full bg-[#F3F3F3] rounded-[50px] p-16">
+           <WorksList />
+          </div>
         </div>
         <ContactCTA />
         <Footer />
