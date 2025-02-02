@@ -25,42 +25,38 @@ const steps = [
 export function PaintingProcess() {
   return (
     <section className="py-8 md:py-16">
-      <div className="w-full bg-[#F3F3F3] rounded-[25px] md:rounded-[50px] p-6 md:p-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">塗装の流れ</h2>
-        <div className="px-4">
+      <div className="w-full bg-[#F3F3F3] rounded-[25px] md:rounded-[50px] p-4 md:p-8 lg:p-16">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 lg:mb-12">塗装の流れ</h2>
+        <div className="px-2 md:px-4">
           <div className="max-w-5xl mx-auto">
             {steps.map((step, index) => (
               <div 
                 key={step.id} 
-                className="relative pb-12 sm:pb-16 md:pb-20 last:pb-0"
+                className="relative pb-8 sm:pb-12 md:pb-16 last:pb-0"
               >
-                {/* ステップカード */}
-                <div className="relative z-10 bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div className="relative z-10 bg-white rounded-xl md:rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                   <div className="flex flex-col sm:flex-row items-stretch">
-                    {/* 左側：ステップ番号 */}
-                    <div className="bg-[#005a64] text-white p-4 sm:p-6 md:p-8 sm:w-[200px] md:w-[240px] flex flex-col justify-center items-center">
-                      <span className="text-lg sm:text-xl md:text-2xl font-bold mb-1">
+                    <div className="bg-[#005a64] text-white p-3 sm:p-4 md:p-6 lg:p-8 sm:w-[160px] md:w-[200px] lg:w-[240px] flex flex-col justify-center items-center">
+                      <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1">
                         {step.title}
                       </span>
-                      <span className="text-sm sm:text-base text-center">
+                      <span className="text-xs sm:text-sm text-center">
                         {step.description}
                       </span>
                     </div>
 
-                    {/* 右側：詳細説明 */}
-                    <div className="p-4 sm:p-6 md:p-8 flex-1 bg-white">
-                      <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+                    <div className="p-3 sm:p-4 md:p-6 lg:p-8 flex-1 bg-white">
+                      <p className="text-sm md:text-base lg:text-lg leading-relaxed">
                         {step.detail}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* 接続線（最後のステップ以外に表示） */}
                 {index < steps.length - 1 && (
-                  <div className="absolute left-0 right-0 bottom-0 h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                    <div className="w-8 h-8 flex items-center justify-center">
-                      <div className="w-4 h-4 border-r-2 border-b-2 border-[#005a64] transform rotate-45" />
+                  <div className="absolute left-0 right-0 bottom-0 h-8 sm:h-12 md:h-16 flex items-center justify-center">
+                    <div className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center">
+                      <div className="w-3 h-3 md:w-4 md:h-4 border-r-2 border-b-2 border-[#005a64] transform rotate-45" />
                     </div>
                   </div>
                 )}
@@ -69,8 +65,7 @@ export function PaintingProcess() {
           </div>
         </div>
 
-        {/* お見積りボタン */}
-        <div className="text-center mt-8 sm:mt-10 md:mt-12 px-4">
+        <div className="text-center mt-6 sm:mt-8 md:mt-10 lg:mt-12 px-4">
           <EstimateButton />
         </div>
       </div>
