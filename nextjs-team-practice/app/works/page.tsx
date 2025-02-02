@@ -6,7 +6,10 @@ import { HeroSection } from "@/app/components/shared/hero-section"
 export default function WorksPage() {
   return (
     <>
-      <HeroSection title="施工事例" />
+      <HeroSection 
+        title="施工事例" 
+        description={`これまでの施工実績をご紹介いたします`}
+      />
       <div className="bg-[#f3f3f3]">
         <div className="container mx-auto px-4">
           <Breadcrumb 

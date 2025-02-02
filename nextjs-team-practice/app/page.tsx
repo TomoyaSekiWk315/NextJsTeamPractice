@@ -4,14 +4,12 @@ import { CTASection } from "./components/cta-section"
 import { Services } from "./components/services"
 import { CompanyFeatures } from "./components/company-features"
 import { HeroSection } from "./components/shared/hero-section"
+import { HomeHero } from './components/home-hero'
 
 export default function Home() {
   return (
     <>
-      <HeroSection 
-        title="キャッチコピー：64px"
-        titleTag="h2"
-      />
+      <HomeHero />
 
       <div className="bg-[#ffffff]">
         <div className="container mx-auto px-4">

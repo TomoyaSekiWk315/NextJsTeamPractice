@@ -3,6 +3,7 @@ import { ServiceSection } from "./components/service-section"
 import { SpecialPainting } from "./components/special-painting"
 import { CTASection } from "./components/cta-section"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
+import { HeroSection } from "@/app/components/shared/hero-section"
 
 export default function ServicesPage() {
   const wallPaintingCards = [
@@ -63,7 +64,10 @@ export default function ServicesPage() {
 
   return (
     <>
-      <ServiceHero />
+      <HeroSection 
+        title="サービス案内" 
+        description={`建物の価値を高める、\n多彩な塗装サービスをご提供いたします`}
+      />
       <div className="bg-[#ffffff]">
         <div className="container mx-auto px-4">
           <Breadcrumb 
