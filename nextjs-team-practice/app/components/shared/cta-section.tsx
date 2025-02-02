@@ -20,8 +20,10 @@ export function CTASection() {
             <div className="bg-[#005a64] text-white rounded-lg p-3 md:p-6 lg:p-8 flex flex-col justify-center">
               <div className="flex items-center gap-2 md:gap-4 mb-2 md:mb-4 justify-center">
                 <Clock className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 flex-shrink-0" />
-                <span className="text-[10px] md:text-[12px] lg:text-[16px] font-bold whitespace-nowrap">
-                  営業時間 月〜土 08:00〜19:00 日曜も対応可能
+                <span className="text-[10px] md:text-[12px] lg:text-[16px] font-bold">
+                  営業時間 月〜土 08:00〜19:00
+                  <br className="hidden md:block lg:hidden" />
+                  日曜も対応可能
                 </span>
               </div>
               <div className="flex items-center gap-2 md:gap-4 justify-center">
@@ -34,10 +36,12 @@ export function CTASection() {
               className="bg-[#005a64] hover:bg-[#005a64]/90 text-white h-full p-3 md:p-6 lg:p-8 flex items-center justify-center gap-2 md:gap-4 rounded-lg [&_svg]:w-4 md:[&_svg]:w-8 lg:[&_svg]:w-12 [&_svg]:h-4 md:[&_svg]:h-8 lg:[&_svg]:h-12"
             >
               <Mail className="flex-shrink-0" />
-              <span className="text-[20px] md:text-[32px] lg:text-[48px] font-bold leading-none whitespace-nowrap">
+              <span className="text-[20px] md:text-[32px] lg:text-[48px] font-bold leading-none">
                 メールで相談
+                <br className="hidden md:block lg:hidden" />
+                <span className="hidden md:inline lg:hidden">→</span>
               </span>
-              <span className="text-[20px] md:text-[32px] lg:text-[48px] leading-none">→</span>
+              <span className="md:hidden lg:inline text-[20px] md:text-[32px] lg:text-[48px] leading-none">→</span>
             </Button>
           </div>
         </div>

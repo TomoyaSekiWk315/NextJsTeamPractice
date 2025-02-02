@@ -38,7 +38,7 @@ export function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 bg-[#005a64] text-white p-3 rounded-full shadow-lg hover:bg-[#005a64]/90 active:scale-95 transition-all duration-300"
+      className="fixed bottom-4 right-8 sm:bottom-32 sm:right-8 z-50 bg-[#005a64] text-white p-3 rounded-full shadow-lg hover:bg-[#005a64]/90 active:scale-95 transition-all duration-300"
       aria-label="ページトップへ戻る"
     >
       <ChevronUp className="w-6 h-6" />
