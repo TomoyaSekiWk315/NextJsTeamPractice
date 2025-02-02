@@ -1,5 +1,5 @@
 import { WorksList } from "./components/works-list"
-import { ContactCTA } from "../services/components/contact-cta"
+import { CTASection } from "@/app/components/shared/cta-section"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 import { HeroSection } from "@/app/components/shared/hero-section"
 
@@ -16,9 +16,9 @@ export default function WorksPage() {
             ]} 
           />
           <WorksList />
-          <ContactCTA />
         </div>
       </div>
+      <CTASection />
     </>
   )
 }

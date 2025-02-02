@@ -1,14 +1,12 @@
 import { ServiceFeatures } from "../components/service-features"
 import { ServiceFlow } from "../components/service-flow"
 import { FAQSection } from "../components/faq-section"
-import { ContactCTA } from "../components/contact-cta"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
-import { Button } from "@/components/ui/button"
 import { Metadata } from 'next'
 import { HeroSection } from "@/app/components/shared/hero-section"
 import { ScrollToTopButton } from "@/app/components/shared/scroll-to-top-button"
 import { EstimateButton } from "@/app/components/shared/estimate-button"
-
+import { CTASection } from "@/app/components/shared/cta-section"
 type Props = {
   params: Promise<{
     type: string
@@ -85,7 +83,7 @@ export default async function ServiceDetailPage({
 
         {/* CTA セクション */}
         <div className="mt-8 sm:mt-12 md:mt-16">
-          <ContactCTA />
+          <CTASection />
         </div>
 
         {/* スクロールトップボタン */}

@@ -3,10 +3,9 @@ import { WorkDetailHero } from "../components/work-detail-hero"
 import { WorkOverview } from "../components/work-overview"
 import { BeforeAfter } from "../components/before-after"
 import { CustomerVoice } from "../components/customer-voice"
-import { ContactCTA } from "@/app/services/components/contact-cta"
-import { Footer } from "@/app/components/shared/footer"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 import { Metadata } from 'next'
+import { CTASection } from "@/app/components/shared/cta-section"
 
 // Next.jsの型定義をインポート
 import { ResolvingMetadata } from 'next'
@@ -66,7 +65,7 @@ export default async function WorkDetailPage({
           <BeforeAfter />
           <CustomerVoice testimonial={workData.customerVoice} />
         </div>
-        <ContactCTA />
+        <CTASection />
       </div>
     </>
   )

@@ -1,9 +1,9 @@
 import { CompanyPhilosophy } from "./components/company-philosophy"
 import { CompanyOverview } from "./components/company-overview"
 import { CompanyHistory } from "./components/company-history"
-import { ContactCTA } from "../services/components/contact-cta"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 import { HeroSection } from "@/app/components/shared/hero-section"
+import { CTASection } from "@/app/components/shared/cta-section"
 
 export default function CompanyPage() {
   return (
@@ -21,7 +21,7 @@ export default function CompanyPage() {
           <CompanyOverview />
           <CompanyHistory />
         </div>
-        <ContactCTA />
+        <CTASection />
       </div>
     </>
   )
