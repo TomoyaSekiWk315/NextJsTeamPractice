@@ -1,25 +1,27 @@
 export function CompanyOverview() {
   const companyDetails = [
-    { label: '社名', value: '株式会社塗装専門店' },
+    { label: '社名', value: '株式会社MVP塗装' },
     { label: '設立', value: '1990年4月1日' },
-    { label: '資本金', value: '1億円' },
-    { label: '代表者', value: '代表取締役社長 山田太郎' },
-    { label: '従業員数', value: '150名（2023年4月現在）' },
+    { label: '資本金', value: '5,000万円' },
+    { label: '代表者', value: '代表取締役社長 佐藤 誠' },
+    { label: '従業員数', value: '45名（2024年1月現在）' },
     { 
       label: '事業内容', 
       value: [
-        '・外壁塗装',
-        '・屋根塗装',
-        '・特殊塗装'
+        '・建築物の外壁・屋根塗装工事',
+        '・防水工事',
+        '・リフォーム工事',
+        '・建築物の調査・診断',
+        '・塗装関連商品の販売'
       ]
     },
     { 
       label: '所在地', 
       value: [
-        '〒XXX-XXXX',
-        '東京都○○区○○X-X-X',
-        'TEL: 03-XXXX-XXXX',
-        'FAX: 03-XXXX-XXXX'
+        '〒160-0022',
+        '東京都新宿区新宿3丁目1-1 MVPビル4階',
+        'TEL: 03-1234-5678',
+        'FAX: 03-1234-5679'
       ]
     },
   ]
