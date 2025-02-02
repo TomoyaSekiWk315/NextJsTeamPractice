@@ -6,6 +6,7 @@ import { CustomerVoice } from "../components/customer-voice"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 import { Metadata } from 'next'
 import { CTASection } from "@/app/components/shared/cta-section"
+import { WorkFAQ } from "../components/work-faq"
 
 // Next.jsの型定義をインポート
 import { ResolvingMetadata } from 'next'
@@ -40,7 +41,7 @@ function getWorkData(id: string) {
     title: `○○家様${id}塗装`,
     overview: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
     features: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
-    customerVoice: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    customerVoice: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
   }
 }
 
@@ -63,7 +64,8 @@ export default async function WorkDetailPage({
           />
           <WorkOverview data={workData} />
           <BeforeAfter />
-          <CustomerVoice testimonial={workData.customerVoice} />
+          <CustomerVoice />
+          <WorkFAQ />
         </div>
         <CTASection />
       </div>
