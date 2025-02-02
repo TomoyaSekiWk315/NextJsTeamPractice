@@ -25,15 +25,15 @@ export function CompanyOverview() {
   ]
 
   return (
-    <section className="py-8 md:py-16">
-      <div className="bg-white rounded-xl md:rounded-3xl p-6 md:p-8 lg:p-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">会社概要</h2>
+    <section className="py-16">
+      <div className="bg-white rounded-3xl p-8 md:p-12">
+        <h2 className="text-3xl font-bold text-center mb-12">会社概要</h2>
         <div className="max-w-3xl mx-auto">
           <dl className="divide-y divide-gray-200">
             {companyDetails.map((detail, index) => (
-              <div key={index} className="py-4 grid grid-cols-1 sm:grid-cols-[140px_1fr] md:grid-cols-[200px_1fr] gap-2 md:gap-4">
-                <dt className="font-bold text-sm md:text-base">{detail.label}</dt>
-                <dd className="text-sm md:text-base">
+              <div key={index} className="py-4 grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
+                <dt className="font-bold">{detail.label}</dt>
+                <dd>
                   {Array.isArray(detail.value) ? (
                     <div className="space-y-1">
                       {detail.value.map((line, i) => (
