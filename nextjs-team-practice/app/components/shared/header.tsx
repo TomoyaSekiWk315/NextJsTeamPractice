@@ -11,7 +11,8 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0)
+      // スクロール位置が20pxを超えたら固定表示
+      setScrolled(window.scrollY > 20)
       if (isOpen) setIsOpen(false)
     }
 
@@ -42,24 +43,39 @@ export function Header() {
   }, [isOpen])
 
   return (
-    <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${scrolled ? 'shadow-md' : ''}`}>
-      <div className="bg-[#f3f3f3] py-1">
-        <div className="container mx-auto px-4 flex flex-col sm:flex-row sm:justify-end gap-2 sm:gap-6 text-sm">
-          <span className="flex items-center justify-center sm:justify-start gap-1">
-            <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <header 
+      className={`w-full z-50 transition-all duration-500 ease-in-out
+        ${scrolled 
+          ? 'fixed top-0 left-0 right-0' 
+          : 'relative'
+        }`}
+    >
+      <div 
+        className={`bg-[#f3f3f3] transition-all duration-300 ease-in-out overflow-hidden
+          ${scrolled ? 'h-0' : 'h-[48px] sm:h-[32px]'}`}
+      >
+        <div className="container mx-auto px-4 flex flex-col sm:flex-row sm:justify-end gap-1 sm:gap-6 text-sm py-1">
+          <span className={`flex items-center justify-center sm:justify-start gap-1 text-xs sm:text-sm
+            ${scrolled ? 'hidden sm:flex' : 'flex'}`}
+          >
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span className="whitespace-nowrap">営業時間: 9:00-18:00（土日祝除く）</span>
           </span>
-          <a href="tel:03-XXXX-XXXX" className="flex items-center justify-center sm:justify-start gap-1">
-            <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+          <a href="tel:03-XXXX-XXXX" 
+            className={`flex items-center justify-center sm:justify-start gap-1 text-xs sm:text-sm
+              ${scrolled ? 'sm:hidden' : ''}`}
+          >
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
             <span className="whitespace-nowrap">03-XXXX-XXXX</span>
           </a>
         </div>
       </div>
-      <div className="border-b bg-white relative z-50">
+      <div className={`border-b bg-white ${scrolled ? 'shadow-md' : ''}`}>
         <div className="container mx-auto px-4 flex items-center justify-between h-16">
           <Link 
             href="/" 

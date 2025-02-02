@@ -6,24 +6,24 @@ import { Paintbrush, Home, Wrench } from 'lucide-react'
 const services = [
   {
     title: '屋根塗装',
-    description: 'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト',
+    description: '建物を雨や紫外線から守る屋根の塗装。耐久性の高い塗料と熟練の技術で、美しさと保護性を両立した施工を行います。定期的なメンテナンスで建物の寿命を延ばし、資産価値を守ります。',
     link: '/services/roof-painting',
     icon: Home,
-    features: ['耐久性向上', '美観の維持', '資産価値の保護']
+    features: ['遮熱・断熱効果', '防水性能向上', '建物保護']
   },
   {
     title: '外壁塗装',
-    description: 'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト',
+    description: '建物の印象を大きく左右する外壁。高品質な塗料と丁寧な下地処理で、美しさと耐久性を実現します。カラーシミュレーションで仕上がりをイメージしながら、最適な色選びをサポートいたします。',
     link: '/services/exterior-wall-painting',
     icon: Paintbrush,
-    features: ['防水性能向上', '外観の美化', '熱効率の改善']
+    features: ['美観の向上', '建物の保護', '省エネ効果']
   },
   {
     title: '特殊塗装',
-    description: 'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト',
+    description: '店舗や商業施設、特殊な素材など、様々なニーズに対応する特殊塗装。防カビ、防汚、断熱など、目的に応じた機能性塗料を使用し、建物の価値を高める施工を提供します。',
     link: '/services/special-painting',
     icon: Wrench,
-    features: ['特殊素材対応', 'カスタム施工', '高度な技術']
+    features: ['多彩な機能性', '特殊素材対応', 'デザイン性']
   },
 ]
 
