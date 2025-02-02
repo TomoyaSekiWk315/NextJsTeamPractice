@@ -42,9 +42,8 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-[#F3F3F3]">
-      {/* メインフッター */}
       <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-6 md:gap-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-6 md:gap-6 lg:gap-12">
           {/* 左カラム：会社情報 */}
           <div className="md:col-span-2 space-y-4 md:space-y-6 text-center md:text-left">
             <Link href="/" className="inline-block group">
@@ -60,22 +59,22 @@ export function Footer() {
           </div>
 
           {/* 右カラム：ナビゲーション */}
-          <div className="md:col-span-4 grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-4">
+          <div className="md:col-span-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
             {Object.entries(footerLinks).map(([category, { href, links }]) => (
-              <div key={category} className="space-y-3 md:space-y-4">
+              <div key={category} className="space-y-2 sm:space-y-3">
                 <Link 
                   href={href}
-                  className="inline-block text-base md:text-lg font-bold text-gray-900 hover:text-[#005a64] transition-colors"
+                  className="inline-block text-sm sm:text-base font-bold text-gray-900 hover:text-[#005a64] transition-colors"
                 >
                   {category}
                 </Link>
                 {links.length > 0 && (
-                  <ul className="space-y-2 md:space-y-3">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {links.map((link) => (
                       <li key={link.title}>
                         <Link 
                           href={link.href} 
-                          className="text-xs md:text-sm text-gray-600 hover:text-[#005a64] transition-colors block"
+                          className="text-[11px] sm:text-xs text-gray-600 hover:text-[#005a64] transition-colors block"
                         >
                           {link.title}
                         </Link>
@@ -84,11 +83,13 @@ export function Footer() {
                   </ul>
                 )}
                 {category === 'お問い合わせ' && (
-                  <div className="pt-0">
-                    <Link href="/contact">
-                      <Button className="bg-[#005a64] text-white hover:bg-[#005a64]/90 shadow-md hover:shadow-lg transition-all duration-300 w-full h-8 px-2 text-[10px] md:text-xs">
-                        見積もりを依頼
-                        <ArrowRight className="h-2.5 w-2.5 ml-1" />
+                  <div className="pt-1">
+                    <Link href="/contact" className="block">
+                      <Button 
+                        className="w-full min-h-[24px] px-1 text-[8px] sm:text-[9px] bg-[#005a64] text-white hover:bg-[#005a64]/90 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-0.5"
+                      >
+                        お見積り
+                        <ArrowRight className="h-2 w-2 flex-shrink-0" />
                       </Button>
                     </Link>
                   </div>
@@ -101,14 +102,20 @@ export function Footer() {
         {/* コピーライト */}
         <div className="mt-8 md:mt-16 pt-4 md:pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs md:text-sm text-gray-600 text-center md:text-left">
+            <p className="text-[10px] sm:text-xs md:text-sm text-gray-600 text-center md:text-left">
               © 2024 MVP塗装 All Rights Reserved.
             </p>
-            <div className="flex gap-4 md:gap-6 text-xs md:text-sm">
-              <Link href="/privacy-policy" className="text-gray-600 hover:text-[#005a64] transition-colors">
+            <div className="flex gap-4 md:gap-6">
+              <Link 
+                href="/privacy-policy" 
+                className="text-[10px] sm:text-xs md:text-sm text-gray-600 hover:text-[#005a64] transition-colors"
+              >
                 プライバシーポリシー
               </Link>
-              <Link href="/terms" className="text-gray-600 hover:text-[#005a64] transition-colors">
+              <Link 
+                href="/terms" 
+                className="text-[10px] sm:text-xs md:text-sm text-gray-600 hover:text-[#005a64] transition-colors"
+              >
                 利用規約
               </Link>
             </div>
