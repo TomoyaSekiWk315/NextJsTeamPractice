@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Metadata } from 'next'
 import { HeroSection } from "@/app/components/shared/hero-section"
 import { ScrollToTopButton } from "@/app/components/shared/scroll-to-top-button"
+import { EstimateButton } from "@/app/components/shared/estimate-button"
 
 type Props = {
   params: Promise<{
@@ -74,11 +75,7 @@ export default async function ServiceDetailPage({
             </h2>
             <ServiceFlow />
             <div className="text-center mt-8 sm:mt-10 md:mt-12 px-4">
-              <Button 
-                className="w-full sm:w-auto min-h-[48px] px-8 sm:px-12 bg-[#005a64] text-white hover:bg-[#005a64]/90 active:scale-95 transition-all duration-300 text-sm sm:text-base md:text-lg rounded-full"
-              >
-                お見積りはこちら →
-              </Button>
+              <EstimateButton />
             </div>
           </section>
 

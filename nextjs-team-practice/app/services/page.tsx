@@ -1,9 +1,7 @@
-import { Header } from "@/app/components/shared/header"
 import { ServiceHero } from "./components/service-hero"
 import { ServiceSection } from "./components/service-section"
 import { SpecialPainting } from "./components/special-painting"
 import { CTASection } from "./components/cta-section"
-import { Footer } from "@/app/components/shared/footer"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 
 export default function ServicesPage() {
