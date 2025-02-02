@@ -1,13 +1,11 @@
-import { Header } from "@/app/components/shared/header"
-import { ServiceDetailHero } from "../components/service-detail-hero"
 import { ServiceFeatures } from "../components/service-features"
 import { ServiceFlow } from "../components/service-flow"
 import { FAQSection } from "../components/faq-section"
 import { ContactCTA } from "../components/contact-cta"
-import { Footer } from "@/app/components/shared/footer"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 import { Button } from "@/components/ui/button"
 import { Metadata } from 'next'
+import { HeroSection } from "@/app/components/shared/hero-section"
 
 type Props = {
   params: Promise<{
@@ -38,7 +36,7 @@ export default async function ServiceDetailPage({
 
   return (
     <div className="min-h-screen">
-      <ServiceDetailHero title={serviceTitle} />
+      <HeroSection title={serviceTitle} />
       <main>
         <div className="container mx-auto px-4">
           <Breadcrumb 
