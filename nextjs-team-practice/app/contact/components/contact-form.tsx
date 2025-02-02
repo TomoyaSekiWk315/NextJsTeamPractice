@@ -22,11 +22,11 @@ export function ContactForm() {
   }
 
   return (
-    <section className="py-8 md:py-16">
-      <div className="max-w-3xl mx-auto px-4">
-        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start md:items-center">
-            <Label htmlFor="name" className="bg-[#005a64] text-white p-2 md:p-4 text-center md:text-left">
+    <section className="py-16">
+      <div className="max-w-3xl mx-auto">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-[200px_1fr] gap-4 items-center">
+            <Label htmlFor="name" className="bg-[#005a64] text-white p-4">
               お名前
             </Label>
             <input
@@ -34,13 +34,13 @@ export function ContactForm() {
               id="name"
               name="name"
               required
-              className="bg-[#d9d9d9] p-2 md:p-4 w-full text-sm md:text-base"
+              className="bg-[#d9d9d9] p-4 w-full"
               placeholder="お名前を入力してください"
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start md:items-center">
-            <Label htmlFor="phone" className="bg-[#005a64] text-white p-2 md:p-4 text-center md:text-left">
+          <div className="grid grid-cols-[200px_1fr] gap-4 items-center">
+            <Label htmlFor="phone" className="bg-[#005a64] text-white p-4">
               電話番号
             </Label>
             <input
@@ -48,13 +48,13 @@ export function ContactForm() {
               id="phone"
               name="phone"
               required
-              className="bg-[#d9d9d9] p-2 md:p-4 w-full text-sm md:text-base"
+              className="bg-[#d9d9d9] p-4 w-full"
               placeholder="電話番号を入力してください"
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start md:items-center">
-            <Label htmlFor="address" className="bg-[#005a64] text-white p-2 md:p-4 text-center md:text-left">
+          <div className="grid grid-cols-[200px_1fr] gap-4 items-center">
+            <Label htmlFor="address" className="bg-[#005a64] text-white p-4">
               ご住所
             </Label>
             <input
@@ -62,13 +62,13 @@ export function ContactForm() {
               id="address"
               name="address"
               required
-              className="bg-[#d9d9d9] p-2 md:p-4 w-full text-sm md:text-base"
+              className="bg-[#d9d9d9] p-4 w-full"
               placeholder="ご住所を入力してください"
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start md:items-center">
-            <Label htmlFor="email" className="bg-[#005a64] text-white p-2 md:p-4 text-center md:text-left">
+          <div className="grid grid-cols-[200px_1fr] gap-4 items-center">
+            <Label htmlFor="email" className="bg-[#005a64] text-white p-4">
               メールアドレス
             </Label>
             <input
@@ -76,41 +76,41 @@ export function ContactForm() {
               id="email"
               name="email"
               required
-              className="bg-[#d9d9d9] p-2 md:p-4 w-full text-sm md:text-base"
+              className="bg-[#d9d9d9] p-4 w-full"
               placeholder="メールアドレスを入力してください"
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start">
-            <Label htmlFor="message" className="bg-[#005a64] text-white p-2 md:p-4 text-center md:text-left">
+          <div className="grid grid-cols-[200px_1fr] gap-4 items-start">
+            <Label htmlFor="message" className="bg-[#005a64] text-white p-4">
               お問い合わせ内容
             </Label>
             <Textarea
               id="message"
               name="message"
               required
-              className="bg-[#d9d9d9] p-2 md:p-4 w-full min-h-[120px] md:min-h-[150px] text-sm md:text-base"
+              className="bg-[#d9d9d9] p-4 w-full min-h-[150px]"
               placeholder="お問い合わせ内容を入力してください"
             />
           </div>
 
-          <div className="flex items-center justify-center gap-2 md:gap-4 border-2 border-[#005a64] p-3 md:p-4 rounded-lg max-w-md mx-auto">
+          <div className="flex items-center justify-center gap-4 border-2 border-[#005a64] p-4 rounded-lg max-w-md mx-auto">
             <Checkbox
               id="privacy"
               checked={privacyAccepted}
               onCheckedChange={(checked) => setPrivacyAccepted(checked as boolean)}
-              className="w-4 h-4 md:w-5 md:h-5 border-2 border-[#005a64]"
+              className="w-5 h-5 border-2 border-[#005a64]"
             />
-            <Label htmlFor="privacy" className="text-sm md:text-base font-medium">
+            <Label htmlFor="privacy" className="text-base font-medium">
               プライバシーポリシーに同意します
             </Label>
           </div>
 
-          <div className="flex justify-center pt-4 md:pt-8">
+          <div className="flex justify-center pt-8">
             <Button
               type="submit"
               disabled={!privacyAccepted || isSubmitting}
-              className="bg-[#005a64] text-white px-8 md:px-16 py-4 md:py-6 rounded-full hover:bg-[#005a64]/90 text-base md:text-xl w-full max-w-md"
+              className="bg-[#005a64] text-white px-16 py-6 rounded-full hover:bg-[#005a64]/90 text-xl w-full max-w-md"
             >
               {isSubmitting ? '送信中...' : '送信する'}
             </Button>
