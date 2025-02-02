@@ -3,10 +3,10 @@ import { WorkDetailHero } from "../components/work-detail-hero"
 import { WorkOverview } from "../components/work-overview"
 import { BeforeAfter } from "../components/before-after"
 import { CustomerVoice } from "../components/customer-voice"
-import { ContactCTA } from "@/app/services/components/contact-cta"
-import { Footer } from "@/app/components/shared/footer"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 import { Metadata } from 'next'
+import { CTASection } from "@/app/components/shared/cta-section"
+import { WorkFAQ } from "../components/work-faq"
 
 // Next.jsの型定義をインポート
 import { ResolvingMetadata } from 'next'
@@ -40,8 +40,8 @@ function getWorkData(id: string) {
   return {
     title: `○○家様${id}塗装`,
     overview: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
-    features: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
-    customerVoice: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    features: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+    customerVoice: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
   }
 }
 
@@ -51,10 +51,9 @@ export default async function WorkDetailPage({
 }: Props) {
   const workData = getWorkData(params.id)
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
       <WorkDetailHero />
-      <main className="bg-[#f3f3f3]">
+      <div className="bg-[#f3f3f3]">
         <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
@@ -65,12 +64,12 @@ export default async function WorkDetailPage({
           />
           <WorkOverview data={workData} />
           <BeforeAfter />
-          <CustomerVoice testimonial={workData.customerVoice} />
+          <CustomerVoice />
+          <WorkFAQ />
         </div>
-        <ContactCTA />
-        <Footer />
-      </main>
-    </div>
+        <CTASection />
+      </div>
+    </>
   )
 }
 

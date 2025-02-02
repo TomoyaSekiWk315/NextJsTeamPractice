@@ -1,4 +1,16 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
+import { Header } from './components/shared/header'
+import { Footer } from './components/shared/footer'
+import { ScrollToTopButton } from './components/shared/scroll-to-top-button'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'MVP塗装',
+  description: 'MVP塗装のコーポレートサイトです',
+}
 
 export default function RootLayout({
   children,
@@ -7,7 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
+        <ScrollToTopButton />
+      </body>
     </html>
   )
 }

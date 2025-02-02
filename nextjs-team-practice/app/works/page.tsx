@@ -1,16 +1,16 @@
-import { Header } from "@/app/components/shared/header"
-import { WorksHero } from "./components/works-hero"
 import { WorksList } from "./components/works-list"
-import { ContactCTA } from "../services/components/contact-cta"
-import { Footer } from "@/app/components/shared/footer"
+import { CTASection } from "@/app/components/shared/cta-section"
 import { Breadcrumb } from "@/app/components/shared/breadcrumb"
+import { HeroSection } from "@/app/components/shared/hero-section"
 
 export default function WorksPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <WorksHero />
-      <main>
+    <>
+      <HeroSection 
+        title="施工事例" 
+        description={`これまでの施工実績をご紹介いたします`}
+      />
+      <div className="bg-[#f3f3f3]">
         <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
@@ -20,10 +20,9 @@ export default function WorksPage() {
           />
           <WorksList />
         </div>
-        <ContactCTA />
-        <Footer />
-      </main>
-    </div>
+      </div>
+      <CTASection />
+    </>
   )
 }
 
