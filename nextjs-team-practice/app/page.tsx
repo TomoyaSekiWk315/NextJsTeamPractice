@@ -8,16 +8,14 @@ import { CompanyFeatures } from "./components/company-features"
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      
+    <>
       {/* Hero Section */}
       <section className="bg-[#22d6dd] text-center py-24">
         <h2 className="text-[64px] font-bold mb-4">キャッチコピー：64px</h2>
         <p className="text-[32px]">概要説明文：32px</p>
       </section>
 
-      <main className="bg-[#ffffff]">
+      <div className="bg-[#ffffff]">
         <div className="container mx-auto px-4">
           {/* Services */}
           <section className="section-spacing">
@@ -44,11 +42,8 @@ export default function Home() {
         <section className="section-spacing">
           <CTASection />
         </section>
-      </main>
-
-      {/* Footer */}
-      <Footer />
-    </div>
+      </div>
+    </>
   )
 }
 

@@ -49,12 +49,26 @@ export default function ServicesPage() {
     }
   ]
 
+  const mainCard = {
+    title: "タイトル：32px-Bold",
+    description: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+    image: "/placeholder.svg",
+    link: "/services/exterior-wall-painting"
+  }
+
+  const roofMainCard = {
+    title: "タイトル：32px-Bold",
+    description: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+    image: "/placeholder.svg",
+    link: "/services/roof-painting"
+  }
+
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
       <ServiceHero />
-      <main className="bg-[#ffffff]">
-        <div className="container mx-auto px-4">          <Breadcrumb 
+      <div className="bg-[#ffffff]">
+        <div className="container mx-auto px-4">
+          <Breadcrumb 
             items={[
               { label: 'ホーム', href: '/' },
               { label: 'サービス', href: '/services' }
@@ -63,29 +77,18 @@ export default function ServicesPage() {
           <ServiceSection 
             title="外壁塗装"
             cards={wallPaintingCards}
-            mainCard={{
-              title: "タイトル：32px-Bold",
-              description: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
-              image: "/placeholder.svg",
-              link: "/services/exterior-wall-painting"
-            }}
+            mainCard={mainCard}
           />
           <ServiceSection 
             title="屋根塗装"
             cards={roofPaintingCards}
-            mainCard={{
-              title: "タイトル：32px-Bold",
-              description: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
-              image: "/placeholder.svg",
-              link: "/services/roof-painting"
-            }}
+            mainCard={roofMainCard}
           />
           <SpecialPainting />
         </div>
         <CTASection />
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </>
   )
 }
 

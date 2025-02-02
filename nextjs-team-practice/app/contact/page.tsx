@@ -6,10 +6,9 @@ import { Breadcrumb } from "@/app/components/shared/breadcrumb"
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
       <ContactHero />
-      <main className="bg-[#f3f3f3]">
+      <div className="bg-[#f3f3f3]">
         <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
@@ -19,9 +18,8 @@ export default function ContactPage() {
           />
           <ContactForm />
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </>
   )
 }
 

@@ -40,7 +40,7 @@ function getWorkData(id: string) {
   return {
     title: `○○家様${id}塗装`,
     overview: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
-    features: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+    features: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
     customerVoice: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
   }
 }
@@ -51,10 +51,9 @@ export default async function WorkDetailPage({
 }: Props) {
   const workData = getWorkData(params.id)
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
       <WorkDetailHero />
-      <main className="bg-[#f3f3f3]">
+      <div className="bg-[#f3f3f3]">
         <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
@@ -68,9 +67,8 @@ export default async function WorkDetailPage({
           <CustomerVoice testimonial={workData.customerVoice} />
         </div>
         <ContactCTA />
-        <Footer />
-      </main>
-    </div>
+      </div>
+    </>
   )
 }
 

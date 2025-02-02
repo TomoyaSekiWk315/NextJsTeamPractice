@@ -38,10 +38,9 @@ export default async function ServiceDetailPage({
 
   return (
     <div className="min-h-screen">
-      <Header />
       <ServiceDetailHero title={serviceTitle} />
       <main>
-       <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
               { label: 'ホーム', href: '/' },
@@ -73,10 +72,9 @@ export default async function ServiceDetailPage({
 
           <FAQSection />
           
-      </div>
-      <ContactCTA />
+        </div>
+        <ContactCTA />
       </main>
-      <Footer />
     </div>
   )
 }
