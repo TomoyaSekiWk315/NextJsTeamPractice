@@ -1,4 +1,6 @@
 import './globals.css'
+import { Header } from '@/app/components/shared/header'
+import { Footer } from '@/app/components/shared/footer'
 
 export default function RootLayout({
   children,
@@ -7,7 +9,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <div className="pt-[89px]">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
